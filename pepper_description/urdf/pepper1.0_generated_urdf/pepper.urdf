@@ -516,6 +516,15 @@
     <origin rpy="0 0.349066 0" xyz="0.0562 0 -0.0692"/>
     <axis xyz="0 0 0"/>
   </joint>
+
+  <link name="HokuyoLaser_frame"/>
+  <joint name="LaserSensor/Hokuyo_sensor_fixedjoint" type="fixed">
+    <parent link="Tibia"/>
+    <child link="HokuyoLaser_frame"/>
+    <origin rpy="0 0 0" xyz="0.2 0 -0.289"/>
+    <axis xyz="0 0 0"/>
+  </joint>
+
   <link name="ImuTorsoAccelerometer_frame"/>
   <joint name="Accelerometer_sensor_fixedjoint" type="fixed">
     <parent link="torso"/>
@@ -2153,7 +2162,7 @@
       </plugin>
     </sensor>
   </gazebo>
-  <!-- 
+  <!--
     BUMPERS
 
 <gazebo reference="BumperB_frame">
